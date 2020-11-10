@@ -1,0 +1,50 @@
+{
+    "name": "antoniokadid/wordpress-kit",
+    "description": "A library to assist with the development of plugins and themes for WordPress.",
+    "homepage": "https://github.com/antoniokadid/WordPressKit",
+    "type": "library",
+    "license": "MIT",
+    "prefer-stable": true,
+    "minimum-stability": "dev",
+    "keywords": [
+        "wordpress"
+    ],
+    "authors": [    
+        {
+            "name": "Antonio Kadid",
+            "email": "antoniokadid@gmail.com",
+            "homepage": "https://www.antoniokadid.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.1"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.5",
+        "friendsofphp/php-cs-fixer": "^2.16",
+        "phpcompatibility/php-compatibility": "^9.3",
+        "wp-coding-standards/wpcs": "^2.3"
+    },
+    "config": {
+        "platform": {
+            "php": "7.1"
+        },
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "AntonioKadid\\WordPressKit\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "AntonioKadid\\WordPressKit\\Tests\\": "tests/",
+            "AntonioKadid\\WordPressKit\\": "src/"
+        }
+    },
+    "scripts": {
+        "setcompat": "phpcs --config-set installed_paths vendor/phpcompatibility/php-compatibility/PHPCompatibility,vendor/wp-coding-standards/wpcs",
+        "test": "./vendor/bin/phpunit --testdox tests"
+    }
+}
